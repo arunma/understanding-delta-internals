@@ -7,10 +7,11 @@ This repo walks that log: commit protocol, snapshot reconstruction, Spark writer
 ```bash
 uv sync
 uv run delta-inspect tables/txns
+uv run delta-inspect tables/stream_txns
 uv run pytest
 ```
 
-`tables/txns` is a Spark-written table (create, appends, checkpoint at v10, OPTIMIZE at v12). No Spark needed to read it. To regenerate: `uv sync --group spark`, then `uv run --group spark python examples/spark/write_table.py`.
+`tables/txns` is batch (appends, checkpoint at v10, OPTIMIZE at v12). `tables/stream_txns` is a streaming sink (`STREAMING UPDATE` + `txn`). No Spark needed to read either. To regenerate: `uv sync --group spark`, then `write_table.py` / `02_streaming_txn.py`.
 
 - [Table layout](docs/01-table-layout.md)
 - [Actions](docs/02-actions.md)

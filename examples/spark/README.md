@@ -1,6 +1,6 @@
 # Spark examples
 
-These write real Delta tables under `examples/spark/out/` and `tables/txns`. Spark 3.5 needs JDK 17 or 21; `session.py` switches to Homebrew `openjdk@17` when `java` on PATH is 22+.
+These write real Delta tables under `tables/txns`, `tables/stream_txns`, and `examples/spark/out/`. Spark 3.5 needs JDK 17 or 21; `session.py` switches to Homebrew `openjdk@17` when `java` on PATH is 22+.
 
 ```bash
 uv sync --group spark
@@ -15,5 +15,5 @@ Run them from the repo root or from this directory.
 The inspector works on the output the same way it works on the fixture:
 
 ```bash
-uv run delta-inspect examples/spark/out/txns history
+uv run delta-inspect tables/stream_txns history
 ```
