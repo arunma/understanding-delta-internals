@@ -1,0 +1,3 @@
+{"commitInfo":{"timestamp":1710000003000,"operation":"STREAMING UPDATE","operationParameters":{"outputMode":"Append","queryId":"3ae45b72-24e1-865a-a211-34987ae02f2a","epochId":"1"},"readVersion":2,"isolationLevel":"WriteSerializable","isBlindAppend":true,"engineInfo":"Apache-Spark/3.5.1 Delta-Lake/3.2.0"}}
+{"add":{"path":"part-00000-dddddddd-1111-2222-3333-444444444444.c000.snappy.parquet","partitionValues":{},"size":98012,"modificationTime":1710000003000,"dataChange":true,"stats":"{\"numRecords\":8,\"minValues\":{\"id\":136,\"amount\":1.0},\"maxValues\":{\"id\":143,\"amount\":9.5},\"nullCount\":{\"id\":0,\"amount\":0}}"}}
+{"txn":{"appId":"3ae45b72-24e1-865a-a211-34987ae02f2a","version":1,"lastUpdated":1710000003000}}

@@ -1,0 +1,10 @@
+---
+description: Never attribute commits to Cursor
+alwaysApply: true
+---
+
+# Git commits: no Cursor attribution
+
+Never add `Co-authored-by: Cursor`, `Cursor Agent`, or `cursoragent@cursor.com` to a commit message, trailer, author, or committer.
+
+If a hook or wrapper injects that trailer, strip it before the commit is pushed. Do not skip other hooks to do this.

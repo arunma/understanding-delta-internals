@@ -1,0 +1,15 @@
+---
+description: Use uv for Python in this repo
+alwaysApply: true
+---
+
+# Python tooling: uv
+
+Use `uv` in this repo. Do not use pip or venv.
+
+```bash
+uv sync
+uv run pytest
+uv run delta-inspect examples/fixtures/txns
+uv run --group spark python examples/spark/01_append_and_inspect.py
+```
