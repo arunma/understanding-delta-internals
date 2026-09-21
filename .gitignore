@@ -15,4 +15,6 @@ checkpoint/
 checkpoints/
 .tmp/
 examples/spark/out/
-tables/
+
+# Hadoop LocalFileSystem checksums (not part of the Delta table)
+*.crc

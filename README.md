@@ -6,11 +6,11 @@ This repo walks that log: commit protocol, snapshot reconstruction, Spark writer
 
 ```bash
 uv sync
-uv run delta-inspect examples/fixtures/txns
+uv run delta-inspect tables/txns
 uv run pytest
 ```
 
-Spark examples (JDK 17): `uv sync --group spark`, then `uv run --group spark python examples/spark/01_append_and_inspect.py`.
+`tables/txns` is a Spark-written table (create, appends, checkpoint at v10, OPTIMIZE at v12). No Spark needed to read it. To regenerate: `uv sync --group spark`, then `uv run --group spark python examples/spark/write_table.py`.
 
 - [Table layout](docs/01-table-layout.md)
 - [Actions](docs/02-actions.md)
